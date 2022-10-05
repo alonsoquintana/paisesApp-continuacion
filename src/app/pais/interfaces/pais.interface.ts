@@ -1,4 +1,13 @@
-export interface Country {
+// To parse this data:
+//
+//   import { Convert } from "./file";
+//
+//   const rESTCountries = Convert.toRESTCountries(json);
+//
+// These functions will throw an error if the JSON doesn't
+// match the expected interface, even if the JSON is valid.
+
+export interface RESTCountries {
     name:         Name;
     tld:          string[];
     cca2:         string;
@@ -110,12 +119,12 @@ export interface PostalCode {
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
-    public static toRESTCountries(json: string): Country[] {
-        return cast(JSON.parse(json), a(r("Country")));
+    public static toRESTCountries(json: string): RESTCountries[] {
+        return cast(JSON.parse(json), a(r("RESTCountries")));
     }
 
-    public static rESTCountriesToJson(value: Country[]): string {
-        return JSON.stringify(uncast(value, a(r("Country"))), null, 2);
+    public static rESTCountriesToJson(value: RESTCountries[]): string {
+        return JSON.stringify(uncast(value, a(r("RESTCountries"))), null, 2);
     }
 }
 
