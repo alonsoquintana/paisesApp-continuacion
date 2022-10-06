@@ -26,11 +26,17 @@ export class PorPaisComponent {
       .subscribe( (paises) => {
         console.log(paises);
         this.paises = paises;
+
       }, (err) => {
         this.hayError = true;
         this.paises   = [];    
       });
       
+  }
+
+  sugerencias( termino: string ) {
+    this.hayError=false;
+    // TODO: crear sugerencias
   }
 
 }
