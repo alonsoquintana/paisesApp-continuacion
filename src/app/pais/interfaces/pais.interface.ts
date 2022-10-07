@@ -10,7 +10,7 @@
 export interface RESTCountries {
     name:         Name;
     tld:          string[];
-    cca2:         string;
+    alpha2Code:   string;
     ccn3:         string;
     cca3:         string;
     cioc:         string;
