@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { switchMap, tap } from 'rxjs/operators';
 
 import { PaisService } from '../../services/pais.service';
-import { RESTCountries } from '../../interfaces/pais.interface';
+import { Country } from '../../interfaces/pais.interface';
 
 @Component({
   selector: 'app-ver-pais',
@@ -13,7 +13,7 @@ import { RESTCountries } from '../../interfaces/pais.interface';
 })
 export class VerPaisComponent implements OnInit {
 
-  pais!: RESTCountries;
+  pais!: Country;
 
   constructor( 
     private activatedRoute: ActivatedRoute,

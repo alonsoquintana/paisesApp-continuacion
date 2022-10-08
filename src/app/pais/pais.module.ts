@@ -26,7 +26,7 @@ import { PaisInputComponent } from './components/pais-input/pais-input.component
     PorPaisComponent,
     PorRegionComponent,
     VerPaisComponent
-  ],  
+  ],
   imports: [
     CommonModule,
     FormsModule,
